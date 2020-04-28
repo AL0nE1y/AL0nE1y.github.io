@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="zh">
 
 <head>
   
@@ -18,14 +18,14 @@
 <meta property="og:url" content="http://al0ne1y.github.io/aboutme.html">
 <meta property="og:site_name" content="A Lonely Blog">
 <meta property="og:description" content="About meAL0nE1yStudent&#x2F;Otaku&#x2F;Coder&#x2F;Gamer&#x2F;Video Maker&#x2F;…About the BlogA L0nE1y Blog by AL0nE1y in github.ioBased on hexoBlog Theme by Nexmoe">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh">
 <meta property="article:published_time" content="2020-02-02T12:00:02.000Z">
 <meta property="article:modified_time" content="2020-04-28T09:34:25.837Z">
 <meta property="article:author" content="AL0nE1y">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1588068071491">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1588081261096">-->
 
    
     <style>
@@ -59,9 +59,9 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>Articles</span>1</div>
-        <div><span>Tags</span>0</div>
-        <div><span>Categories</span>1</div>
+        <div><span>文章</span>1</div>
+        <div><span>标签</span>0</div>
+        <div><span>分类</span>1</div>
     </div>
     <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
         
@@ -72,6 +72,13 @@
             </div>
         </a>
         
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
         <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/aboutme.html" title="关于博客">
             <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
             <div class="mdui-list-item-content">
@@ -79,10 +86,10 @@
             </div>
         </a>
         
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/links-to-friends.html" title="我的朋友">
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/links-to-friends.html" title="友情链接">
             <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
             <div class="mdui-list-item-content">
-                我的朋友
+                友情链接
             </div>
         </a>
         
@@ -91,18 +98,18 @@
   
   <div class="nexmoe-widget-wrap">
     <div class="nexmoe-widget nexmoe-search">
-        <form id="search_form" action_e="https://cn.bing.com/search?q=site:al0ne1y.github.io" onsubmit="return search();">
-            <label><input id="search_value" name="q" type="search" placeholder="Search"></label>
+        <form id="search_form" action_e="https://www.google.com/search?q=al0ne1y.github.io" onsubmit="return search();">
+            <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
         </form>
     </div>
 </div>
   
   <div class="nexmoe-widget-wrap">
-    <h3 class="nexmoe-widget-title">Social</h3>
+    <h3 class="nexmoe-widget-title">社交媒体链接</h3>
     <div class="nexmoe-widget nexmoe-social">
-        <a class="mdui-ripple" href="https://space.bilibili.com/2018543" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+        <a class="mdui-ripple" href="https://space.bilibili.com/2018543" target="_blank" mdui-tooltip="{content: 'BiliBili'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
             <i class="nexmoefont icon-bilibili"></i>
-        </a><a class="mdui-ripple" href="https://github.com/AL0nE1y/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+        </a><a class="mdui-ripple" href="https://github.com/AL0nE1y/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
             <i class="nexmoefont icon-github"></i>
         </a><a class="mdui-ripple" href="https://steamcommunity.com/id/AL0nE1y/" target="_blank" mdui-tooltip="{content: 'Steam'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
             <i class="nexmoefont icon-steam"></i>
@@ -112,7 +119,7 @@
   
   
   <div class="nexmoe-widget-wrap">
-    <h3 class="nexmoe-widget-title">Categories</h3>
+    <h3 class="nexmoe-widget-title">文章分类</h3>
     <div class="nexmoe-widget">
 
       <ul class="category-list">
@@ -141,12 +148,27 @@
   
   
   <div class="nexmoe-widget-wrap">
-    <h3 class="nexmoe-widget-title">Archive</h3>
+    <h3 class="nexmoe-widget-title">文章归档</h3>
     <div class="nexmoe-widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
     </div>
   </div>
 
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">最新文章</h3>
+    <div class="nexmoe-widget">
+      <ul>
+        
+          <li>
+            <a href="/from-WordPress-to-github-io/">从WordPress到github.io的Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
 
   
 </aside>
@@ -190,8 +212,8 @@
     
       
   <div class="nexmoe-post-copyright">
-    <strong>Author：</strong>AL0nE1y<br>
-    <strong>Link：</strong><a href="http://al0ne1y.github.io/aboutme.html" title="http:&#x2F;&#x2F;al0ne1y.github.io&#x2F;aboutme.html" target="_blank" rel="noopener">http:&#x2F;&#x2F;al0ne1y.github.io&#x2F;aboutme.html</a><br>
+    <strong>作者：</strong>AL0nE1y<br>
+    <strong>链接：</strong><a href="http://al0ne1y.github.io/aboutme.html" title="http:&#x2F;&#x2F;al0ne1y.github.io&#x2F;aboutme.html" target="_blank" rel="noopener">http:&#x2F;&#x2F;al0ne1y.github.io&#x2F;aboutme.html</a><br>
     
       <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
     
@@ -221,7 +243,7 @@
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1588068071492"></script>-->
+<!--<script src="/js/app.js?v=1588081261101"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
