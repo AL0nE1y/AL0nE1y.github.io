@@ -4,7 +4,7 @@
 
 <head>
   
-  <title>抽卡概率计算和模拟器制作笔记 - A Lonely Blog</title>
+  <title>表情包管理姬制作笔记 - A Lonely Blog</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -12,24 +12,24 @@
   
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
-  <meta name="description" content="敲代码敲了好久，感觉都没有怎么写过一个具体的工程。有一天抽卡出货的时候突然脑抽了，就想写个抽卡概率模拟器，于是就有了这个工程。因为想法很多，所以计划中的工作量可能很大，于是我暂且放个笔记在这里咕咕咕">
+  <meta name="description" content="同样是我有一天脑抽了用github维护表情包之后想出来的主意，这个坑就这么放在这里了，等以后技术力更高了就来做这个，先把笔记和自己想法写一下">
 <meta property="og:type" content="article">
-<meta property="og:title" content="抽卡概率计算和模拟器制作笔记">
-<meta property="og:url" content="http://al0ne1y.github.io/Gacha-Simulator-Work/index.html">
+<meta property="og:title" content="表情包管理姬制作笔记">
+<meta property="og:url" content="http://al0ne1y.github.io/Meme-Images-Manager-Project/index.html">
 <meta property="og:site_name" content="A Lonely Blog">
-<meta property="og:description" content="敲代码敲了好久，感觉都没有怎么写过一个具体的工程。有一天抽卡出货的时候突然脑抽了，就想写个抽卡概率模拟器，于是就有了这个工程。因为想法很多，所以计划中的工作量可能很大，于是我暂且放个笔记在这里咕咕咕">
+<meta property="og:description" content="同样是我有一天脑抽了用github维护表情包之后想出来的主意，这个坑就这么放在这里了，等以后技术力更高了就来做这个，先把笔记和自己想法写一下">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-04-30T03:08:00.000Z">
-<meta property="article:modified_time" content="2020-05-02T00:38:12.993Z">
+<meta property="article:published_time" content="2020-05-02T03:26:33.000Z">
+<meta property="article:modified_time" content="2020-05-02T03:36:31.563Z">
 <meta property="article:author" content="AL0nE1y">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="Android">
-<meta property="article:tag" content="Javascript">
-<meta property="article:tag" content="编程">
+<meta property="article:tag" content="表情包管理姬">
+<meta property="article:tag" content="Github">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/al0ne1y/al0ne1y.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/al0ne1y/al0ne1y.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/al0ne1y/al0ne1y.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1588389255411">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1588391133896">-->
 
    
     <style>
@@ -63,9 +63,9 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>5</div>
-        <div><span>标签</span>13</div>
-        <div><span>分类</span>2</div>
+        <div><span>文章</span>6</div>
+        <div><span>标签</span>15</div>
+        <div><span>分类</span>3</div>
     </div>
     <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
         
@@ -143,8 +143,15 @@
         
 
         <li class="category-list-item">
-          <a class="category-list-link" href="/categories/随记/">随记</a>
+          <a class="category-list-link" href="/categories/笔记/">笔记</a>
           <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/随记/">随记</a>
+          <span class="category-list-count">1</span>
         </li>
 
         
@@ -159,7 +166,7 @@
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">标签云</h3>
     <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
-      <a href="/tags/After-Effects/" style="font-size: 10px;">After Effects</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/CS-GO/" style="font-size: 10px;">CS:GO</a> <a href="/tags/CS-GO%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/" style="font-size: 10px;">CS:GO视频制作教程</a> <a href="/tags/HLAE/" style="font-size: 10px;">HLAE</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Virtual-Audio-Cable/" style="font-size: 10px;">Virtual Audio Cable</a> <a href="/tags/Voicemeeter/" style="font-size: 10px;">Voicemeeter</a> <a href="/tags/obs/" style="font-size: 10px;">obs</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 10px;">编程</a> <a href="/tags/%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C/" style="font-size: 10px;">视频制作</a>
+      <a href="/tags/After-Effects/" style="font-size: 10px;">After Effects</a> <a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/CS-GO/" style="font-size: 10px;">CS:GO</a> <a href="/tags/CS-GO%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/" style="font-size: 10px;">CS:GO视频制作教程</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/HLAE/" style="font-size: 10px;">HLAE</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Virtual-Audio-Cable/" style="font-size: 10px;">Virtual Audio Cable</a> <a href="/tags/Voicemeeter/" style="font-size: 10px;">Voicemeeter</a> <a href="/tags/obs/" style="font-size: 10px;">obs</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 10px;">编程</a> <a href="/tags/%E8%A1%A8%E6%83%85%E5%8C%85%E7%AE%A1%E7%90%86%E5%A7%AC/" style="font-size: 10px;">表情包管理姬</a> <a href="/tags/%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C/" style="font-size: 10px;">视频制作</a>
     </div>
     
   </div>
@@ -172,11 +179,15 @@
       <ul>
         
           <li>
+            <a href="/Meme-Images-Manager-Project/">表情包管理姬制作笔记</a>
+          </li>
+        
+          <li>
             <a href="/CSGO-Wallhack-Effect/">CS:GO视频制作教程#18:透视效果的进阶使用</a>
           </li>
         
           <li>
-            <a href="/Gacha-Simulator-Work/">抽卡概率计算和模拟器制作笔记</a>
+            <a href="/Gacha-Simulator-Project/">抽卡概率计算和模拟器制作笔记</a>
           </li>
         
           <li>
@@ -185,10 +196,6 @@
         
           <li>
             <a href="/CSGO-Tutorials/">CS:GO相关视频教程汇总</a>
-          </li>
-        
-          <li>
-            <a href="/from-WordPress-to-github-io/">从WordPress到github.io的Hello World</a>
           </li>
         
       </ul>
@@ -209,14 +216,14 @@
         <div class="nexmoe-post">
   
       <div class="nexmoe-post-cover" style="padding-bottom: 56.217882836587876%;"> 
-          <img data-src="https://raw.githubusercontent.com/AL0nE1y/Images-hosting/master/images/20200501232111.jpg" data-sizes="auto" alt="抽卡概率计算和模拟器制作笔记" class="lazyload">
-          <h1>抽卡概率计算和模拟器制作笔记</h1>
+          <img data-src="https://raw.githubusercontent.com/AL0nE1y/Images-hosting/master/images/20200501232111.jpg" data-sizes="auto" alt="表情包管理姬制作笔记" class="lazyload">
+          <h1>表情包管理姬制作笔记</h1>
       </div>
   
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月30日</a>
-    <a><i class="nexmoefont icon-areachart"></i>363 字</a>
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年05月02日</a>
+    <a><i class="nexmoefont icon-areachart"></i>170 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
 </div>
 
@@ -225,20 +232,20 @@
   </div>
 
   <article>
-    <p>敲代码敲了好久，感觉都没有怎么写过一个具体的工程。有一天抽卡出货的时候突然脑抽了，就想写个抽卡概率模拟器，于是就有了这个工程。因为想法很多，所以计划中的工作量可能很大，于是我暂且放个笔记在这里咕咕咕</p>
+    <p>同样是我有一天脑抽了用github维护表情包之后想出来的主意，这个坑就这么放在这里了，等以后技术力更高了就来做这个，先把笔记和自己想法写一下</p>
 <a id="more"></a>
 
-<p><a href="https://github.com/AL0nE1y/Gacha-Simulator" target="_blank" rel="noopener">Github工程链接</a></p>
-<h1 id="计划实现的功能"><a href="#计划实现的功能" class="headerlink" title="计划实现的功能"></a>计划实现的功能</h1><h2 id="抽卡概率计算器"><a href="#抽卡概率计算器" class="headerlink" title="抽卡概率计算器"></a>抽卡概率计算器</h2><h3 id="读取不同游戏当前活动-历史活动池子的概率"><a href="#读取不同游戏当前活动-历史活动池子的概率" class="headerlink" title="读取不同游戏当前活动/历史活动池子的概率"></a>读取不同游戏当前活动/历史活动池子的概率</h3><h3 id="计算不同抽卡次数获得各稀有度比例"><a href="#计算不同抽卡次数获得各稀有度比例" class="headerlink" title="计算不同抽卡次数获得各稀有度比例"></a>计算不同抽卡次数获得各稀有度比例</h3><h3 id="计算以某概率获得某张卡所需的抽卡次数-以某抽卡次数获得某张卡的概率"><a href="#计算以某概率获得某张卡所需的抽卡次数-以某抽卡次数获得某张卡的概率" class="headerlink" title="计算以某概率获得某张卡所需的抽卡次数/以某抽卡次数获得某张卡的概率"></a>计算以某概率获得某张卡所需的抽卡次数/以某抽卡次数获得某张卡的概率</h3><h2 id="抽卡模拟器"><a href="#抽卡模拟器" class="headerlink" title="抽卡模拟器"></a>抽卡模拟器</h2><h3 id="读取不同游戏当前活动-历史活动池子的概率并进行抽卡模拟"><a href="#读取不同游戏当前活动-历史活动池子的概率并进行抽卡模拟" class="headerlink" title="读取不同游戏当前活动/历史活动池子的概率并进行抽卡模拟"></a>读取不同游戏当前活动/历史活动池子的概率并进行抽卡模拟</h3><h1 id="计划支持的游戏-我玩过的一些游戏"><a href="#计划支持的游戏-我玩过的一些游戏" class="headerlink" title="计划支持的游戏 (我玩过的一些游戏)"></a>计划支持的游戏 <del>(我玩过的一些游戏)</del></h1><h2 id="FGO（反正没保底，这游戏最好写了）"><a href="#FGO（反正没保底，这游戏最好写了）" class="headerlink" title="FGO（反正没保底，这游戏最好写了）"></a>FGO（反正没保底，这游戏最好写了）</h2><h2 id="PCR（保底机制是井）"><a href="#PCR（保底机制是井）" class="headerlink" title="PCR（保底机制是井）"></a>PCR（保底机制是井）</h2><h2 id="Bang-Dream-（同上）"><a href="#Bang-Dream-（同上）" class="headerlink" title="Bang Dream!（同上）"></a>Bang Dream!（同上）</h2><h2 id="Lovelive-All-Stars（同上）"><a href="#Lovelive-All-Stars（同上）" class="headerlink" title="Lovelive! All Stars（同上）"></a>Lovelive! All Stars（同上）</h2><h2 id="崩坏3（保底机制100发）"><a href="#崩坏3（保底机制100发）" class="headerlink" title="崩坏3（保底机制100发）"></a>崩坏3（保底机制100发）</h2><h2 id="明日方舟（阶段性概率抽卡，有挑战性）"><a href="#明日方舟（阶段性概率抽卡，有挑战性）" class="headerlink" title="明日方舟（阶段性概率抽卡，有挑战性）"></a>明日方舟（阶段性概率抽卡，有挑战性）</h2><h2 id="少女前线-（兄啊，Clike游戏有什么写的必要吗）"><a href="#少女前线-（兄啊，Clike游戏有什么写的必要吗）" class="headerlink" title="少女前线 （兄啊，Clike游戏有什么写的必要吗）"></a><del>少女前线</del> （兄啊，Clike游戏有什么写的必要吗）</h2><h2 id="其他符合上述机制的游戏根据模板录入数据即可"><a href="#其他符合上述机制的游戏根据模板录入数据即可" class="headerlink" title="其他符合上述机制的游戏根据模板录入数据即可"></a>其他符合上述机制的游戏根据模板录入数据即可</h2><h1 id="计划的实现方式"><a href="#计划的实现方式" class="headerlink" title="计划的实现方式"></a>计划的实现方式</h1><h3 id="C-然后带UI写成exe-施工中"><a href="#C-然后带UI写成exe-施工中" class="headerlink" title="C++然后带UI写成exe(施工中)"></a>C++然后带UI写成exe(施工中)</h3><h3 id="写个网页挂在blog上"><a href="#写个网页挂在blog上" class="headerlink" title="写个网页挂在blog上"></a>写个网页挂在blog上</h3><h3 id="写个Android-App"><a href="#写个Android-App" class="headerlink" title="写个Android App"></a>写个Android App</h3><h3 id="别看了，不会写iOS"><a href="#别看了，不会写iOS" class="headerlink" title="别看了，不会写iOS"></a><del>别看了，不会写iOS</del></h3><p>后续工程正在施工中…<del>咕咕咕</del></p>
+<p><a href="https://github.com/AL0nE1y/Meme-Images-Manager" target="_blank" rel="noopener">Github工程链接</a></p>
+<h1 id="计划实现的功能"><a href="#计划实现的功能" class="headerlink" title="计划实现的功能"></a>计划实现的功能</h1><h2 id="储存表情包并管理维护"><a href="#储存表情包并管理维护" class="headerlink" title="储存表情包并管理维护"></a>储存表情包并管理维护</h2><h2 id="智能分类表情包并支持搜索特定表情包（包括文字，任务，梗系列）"><a href="#智能分类表情包并支持搜索特定表情包（包括文字，任务，梗系列）" class="headerlink" title="智能分类表情包并支持搜索特定表情包（包括文字，任务，梗系列）"></a>智能分类表情包并支持搜索特定表情包（包括文字，任务，梗系列）</h2><h2 id="搜索网络上表情包并保存-分享"><a href="#搜索网络上表情包并保存-分享" class="headerlink" title="搜索网络上表情包并保存/分享"></a>搜索网络上表情包并保存/分享</h2><h1 id="计划的实现方式"><a href="#计划的实现方式" class="headerlink" title="计划的实现方式"></a>计划的实现方式</h1><h2 id="同样一开始是C-带UI写个客户端"><a href="#同样一开始是C-带UI写个客户端" class="headerlink" title="同样一开始是C++带UI写个客户端"></a>同样一开始是C++带UI写个客户端</h2><h2 id="可能会有网页端"><a href="#可能会有网页端" class="headerlink" title="可能会有网页端"></a>可能会有网页端</h2><h2 id="App可能大概会有"><a href="#App可能大概会有" class="headerlink" title="App可能大概会有"></a>App可能大概会有</h2><p>后续工程正在施工中…<del>咕咕咕</del></p>
 
   </article>
 
   <div class="nexmoe-post-meta nexmoe-rainbow">
     
-        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E9%9A%8F%E8%AE%B0/">随记</a>
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
     
     
-        <a class="nexmoefont icon-tag-fill -link" href="/tags/Android/" rel="tag">Android</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/C/" rel="tag">C++</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/Javascript/" rel="tag">Javascript</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a>
+        <a class="nexmoefont icon-tag-fill -link" href="/tags/Android/" rel="tag">Android</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/C/" rel="tag">C++</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/Github/" rel="tag">Github</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/%E8%A1%A8%E6%83%85%E5%8C%85%E7%AE%A1%E7%90%86%E5%A7%AC/" rel="tag">表情包管理姬</a>
     
 </div>
 
@@ -247,9 +254,9 @@
       
   <div class="nexmoe-post-copyright">
     <strong>本文作者：</strong>AL0nE1y<br>
-    <strong>本文链接：</strong><a href="http://al0ne1y.github.io/Gacha-Simulator-Work/" title="http:&#x2F;&#x2F;al0ne1y.github.io&#x2F;Gacha-Simulator-Work&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;al0ne1y.github.io&#x2F;Gacha-Simulator-Work&#x2F;</a><br>
+    <strong>本文链接：</strong><a href="http://al0ne1y.github.io/Meme-Images-Manager-Project/" title="http:&#x2F;&#x2F;al0ne1y.github.io&#x2F;Meme-Images-Manager-Project&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;al0ne1y.github.io&#x2F;Meme-Images-Manager-Project&#x2F;</a><br>
     
-      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+      <strong>版权声明：</strong>本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a>协议，<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank">CC BY-NC-SA 4.0 International</a>协议进行许可。文章的自由复制、转载和修改被允许，但需要注明文章来源且禁止用于商业目的。
     
   </div>
 
@@ -277,7 +284,7 @@
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1588389255412"></script>-->
+<!--<script src="/js/app.js?v=1588391133897"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
