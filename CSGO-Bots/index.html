@@ -4,7 +4,7 @@
 
 <head>
   
-  <title>标签：小说 - A Lonely Blog</title>
+  <title>浅谈CSGO的Bot系统 - A Lonely Blog</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -12,16 +12,24 @@
   
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
-  <meta property="og:type" content="website">
-<meta property="og:title" content="A Lonely Blog">
-<meta property="og:url" content="http://al0ne1y.github.io/tags/%E5%B0%8F%E8%AF%B4/index.html">
+  <meta name="description" content="CS系列到从CS1.6、CSS再到CSGO，Bot也在逐渐进化。这篇文章主要谈一下CSGO的Bot。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浅谈CSGO的Bot系统">
+<meta property="og:url" content="http://al0ne1y.github.io/CSGO-Bots/index.html">
 <meta property="og:site_name" content="A Lonely Blog">
+<meta property="og:description" content="CS系列到从CS1.6、CSS再到CSGO，Bot也在逐渐进化。这篇文章主要谈一下CSGO的Bot。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-05-10T15:22:43.000Z">
+<meta property="article:modified_time" content="2020-05-18T03:32:01.969Z">
 <meta property="article:author" content="AL0nE1y">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="CSGO">
+<meta property="article:tag" content="Bot">
+<meta property="article:tag" content="AI">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/al0ne1y/al0ne1y.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/al0ne1y/al0ne1y.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/al0ne1y/al0ne1y.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1589773200398">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1589773200324">-->
 
    
     <style>
@@ -205,73 +213,99 @@
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
-        
-<section class="nexmoe-archives">
+        <div class="nexmoe-post">
+  
+      <div class="nexmoe-post-cover" style="padding-bottom: 54.166666666666664%;"> 
+          <img data-src="https://raw.githubusercontent.com/AL0nE1y/Images-hosting/master/images/20200518112942.jpg" data-sizes="auto" alt="浅谈CSGO的Bot系统" class="lazyload">
+          <h1>浅谈CSGO的Bot系统</h1>
+      </div>
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年05月10日</a>
+    <a><i class="nexmoefont icon-areachart"></i>568 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+</div>
 
-    <article>
-        
+  <div class="nexmoe-post-right">
+    
+  </div>
 
-        
-            <h2>2020</h2>
-            <ul>
-            
-                <li><span>05-06</span><a href="/Git-Novels/" >重生之我在Github写小说</a></li>
-            
-            </ul>
-        
-    </article>
+  <article>
+    <p>CS系列到从CS1.6、CSS再到CSGO，Bot也在逐渐进化。这篇文章主要谈一下CSGO的Bot。</p>
+<a id="more"></a>
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe src="//player.bilibili.com/player.html?aid=370388299&bvid=BV1uk4y1k7YU&cid=185691436&page=1&as_wide=1&high_quality=1&danmaku=" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe>
+</div>
+
+<p>CSGO最初且一直使用至今的bot系统就是从CS1.6,CSS传承而来的Bot系统，修改bot的办法就是修改Botprofile.db。</p>
+<p>虽然通过修改参数能够让Bot拥有超人的反应速度和瞄准能力，但一些底层的缺陷是很难更改的。比如说，Bot在和敌人交火的时候瞄准的一般是敌人的下半身…</p>
+<p>直到2019年9月16日，V社静悄悄地发布了一个更新，在死亡竞赛中测试了新的Bot决策树系统；而几个月之后，V社发布了裂网大行动，守护模式和剧情模式采用的正是新的Bot系统。</p>
+<p>我们打开csgo/scripts/ai/deathmatch,就能看到死亡竞赛里Bot的决策树以及新的瞄准参数。而guardian文件夹下是守护模式里Bot的决策树，不同的守护模式有不同的设置。</p>
+<p>以Mirage的守护模式为例，Bot的决策树里就写入了爆弹的相关设置。在新的Bot系统下，Bot的瞄准也得到了加强，和敌人交火的时候也会更多地瞄准头部。</p>
+<p>然而目前的Bot系统不完善，基本只能用于死亡竞赛和守护模式，迁移到其他模式里不能很好地兼容（其实我是觉得改到竞技模式是不可能了，因为不可能让一般的Bot太强，让白银玩家没有体验）特别是Valve没有更新开发者文档的情况下，对于新Bot系统的修改更是无从谈起。</p>
+<p>不过我根据sourcemod插件和新的Bot系统大概能实现以下功能：</p>
+<ol>
+<li>模拟正常人买枪，买枪有随机时间</li>
+<li>更科学的购买设定，先买甲，会eco</li>
+<li>更像人类的枪法</li>
+</ol>
+<p>打算实现的功能：</p>
+<ol>
+<li>把守护模式的爆弹功能移植到竞技模式</li>
+<li>给队友发枪</li>
+<li>随机而多样的进攻路线</li>
+</ol>
+<p>目前能修改到的极限大概就是这样，只能等待V社进一步的更新，或者CSGO以后的Bot会越来越强？</p>
+
+  </article>
+
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -link" href="/tags/AI/" rel="tag">AI</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/Bot/" rel="tag">Bot</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/CSGO/" rel="tag">CSGO</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a>
+    
+</div>
+
+  <div class="nexmoe-post-footer">
+    
+      
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>AL0nE1y<br>
+    <strong>本文链接：</strong><a href="http://al0ne1y.github.io/CSGO-Bots/" title="http:&#x2F;&#x2F;al0ne1y.github.io&#x2F;CSGO-Bots&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;al0ne1y.github.io&#x2F;CSGO-Bots&#x2F;</a><br>
+    
+      <strong>版权声明：</strong>本文采用<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a>协议，<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank">CC BY-NC-SA 4.0 International</a>协议进行许可。文章的自由复制、转载和修改被允许，但需要注明文章来源且禁止用于商业目的。
+    
+  </div>
+
+
+    
+    <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '21c3fa92877a4f47894b',
+        clientSecret: '7b93e3e4c6904a52855e2a9d1c70af38a7a8b893',
+        id: window.location.pathname,
+        repo: 'AL0nE1y.github.io',
+        owner: 'AL0nE1y',
+        admin: 'AL0nE1y'
+    })
+    gitalk.render('gitalk')
+</script>
 </section>
-
-<style>
-.nexmoe-archives article > *:first-child {
-    margin-top: 0;
-}
-.nexmoe-archives article > *:last-child {
-    margin-bottom: 0;
-}
-.nexmoe-archives ul {
-    list-style: none;
-    padding-left: 0!important;
-}
-.nexmoe-archives li {
-    position: relative;
-    padding: 10px 0;
-}
-.nexmoe-archives li::before {
-    content: "";
-    width: 14px;
-    height: 14px;
-    background: #ff4e6a;
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: -2px;
-    margin-right: 11px;
-    border-radius: 100%;
-    border: 3px solid #fff;
-    z-index: 100;
-    position: relative;
-}
-.nexmoe-archives li::after {
-    content: "";
-    height: 100%;
-    width: 2px;
-    background: rgba(255, 78, 106, 0.2);
-    position: absolute;
-    left: 6px;
-    top: 20px;
-}
-.nexmoe-archives li:last-child:after {
-    display: none;
-}
-.nexmoe-archives span {
-    margin-right: 15px;
-}
-</style>
+  </div>
+</div>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1589773200399"></script>-->
+<!--<script src="/js/app.js?v=1589773200328"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
