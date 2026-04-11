@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>A Lonely Blog</title>
+    <meta name="author" content="AL0nE1y" />
+
+    <meta name="keywords" content="" />
+    <link rel="canonical" href="http://al0ne1y.github.io/index.html" />
+    <meta property="og:type" content="website">
+<meta property="og:title" content="A Lonely Blog">
+<meta property="og:url" content="http://al0ne1y.github.io/index.html">
+<meta property="og:site_name" content="A Lonely Blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://al0ne1y.github.io/images/avatar.jpg">
+<meta property="article:author" content="AL0nE1y">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://al0ne1y.github.io/images/avatar.jpg">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.38/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+<script src="/js/lib/home.js"></script>
+
+
+<script src="/js/lib/stars.js"></script>
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING...</h2>
+                    <p>It takes some time :)</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>A LONELY BLOG</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;A LONELY BLOG</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div id="home-head">
+    <div
+        id="home-background"
+        ref="homeBackground"
+        data-images="/images/bg.jpg"
+    ></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+
+        <span class="info">
+            <div class="wrap">
+                <h1>A Lonely Blog</h1>
+                
+
+            </div>
+        </span>
+    </div>
+</div>
+<div
+    id="home-posts-wrap"
+    ref="homePostsWrap"
+    true
+>
+    <div id="home-posts">
+        
+
+
+<div class="post" data-category="笔记" style="--tx-post-bg:#fffdfa;--tx-post-text:#1e3e3f;--tx-cat-bg:#eef2f7;--tx-cat-text:#4f6370">
+    <a href="/TeamSpeakMusicBot/">
+        <h2 class="post-title">TeamSpeakMusicBot</h2>
+    </a>
+    <div class="category-and-date">
+        
+        
+        <span class="category">
+            <a href="/categories/%E7%AC%94%E8%AE%B0/" style="color:#4f6370">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                笔记
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/4/11
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>之前买的TS服务器最近也是开始用了，重新研究了一下音乐机器人🤓👆</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+             <a href="/tags/TeamSpeak/" style="color:#4f6370">TeamSpeak</a>
+        </span>
+        
+        
+        <span class="tag">
+             <a href="/tags/Bot/" style="color:#4f6370">Bot</a>
+        </span>
+        
+        
+        <span class="tag">
+             <a href="/tags/%E9%9F%B3%E4%B9%90%E6%9C%BA%E5%99%A8%E4%BA%BA/" style="color:#4f6370">音乐机器人</a>
+        </span>
+        
+    </div>
+    <a href="/TeamSpeakMusicBot/" class="go-post" style="background:#eef2f7;color:#4f6370">Read More...</a>
+</div>
+
+
+<div class="post" data-category="杂谈" style="--tx-post-bg:#fffdfa;--tx-post-text:#1e3e3f;--tx-cat-bg:#eef2f7;--tx-cat-text:#4f6370">
+    <a href="/A-L0nE1y-Blog-Reborn/">
+        <h2 class="post-title">A L0nE1y Blog : Reborn</h2>
+    </a>
+    <div class="category-and-date">
+        
+        
+        <span class="category">
+            <a href="/categories/%E6%9D%82%E8%B0%88/" style="color:#4f6370">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                杂谈
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/4/11
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>Hello World! … Again.<br>这里是重新搭建完博客之后的第一篇文章。</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+             <a href="/tags/Hexo/" style="color:#4f6370">Hexo</a>
+        </span>
+        
+    </div>
+    <a href="/A-L0nE1y-Blog-Reborn/" class="go-post" style="background:#eef2f7;color:#4f6370">Read More...</a>
+</div>
+
+
+<div class="post" data-category="info" style="--tx-post-bg:#fffdfa;--tx-post-text:#1e3e3f;--tx-cat-bg:#eef2f7;--tx-cat-text:#4f6370">
+    <a href="/categories/">
+        <h2 class="post-title">categories</h2>
+    </a>
+    <div class="category-and-date">
+        
+        
+        <span class="category">
+            <a href="/categories/info/" style="color:#4f6370">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                info
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/4/11
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+             <a href="/tags/info/" style="color:#4f6370">info</a>
+        </span>
+        
+    </div>
+    <a href="/categories/" class="go-post" style="background:#eef2f7;color:#4f6370">Read More...</a>
+</div>
+
+
+<div class="post" data-category="info" style="--tx-post-bg:#fffdfa;--tx-post-text:#1e3e3f;--tx-cat-bg:#eef2f7;--tx-cat-text:#4f6370">
+    <a href="/tags/">
+        <h2 class="post-title">tags</h2>
+    </a>
+    <div class="category-and-date">
+        
+        
+        <span class="category">
+            <a href="/categories/info/" style="color:#4f6370">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                info
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/4/11
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+             <a href="/tags/info/" style="color:#4f6370">info</a>
+        </span>
+        
+    </div>
+    <a href="/tags/" class="go-post" style="background:#eef2f7;color:#4f6370">Read More...</a>
+</div>
+
+
+<div class="post" data-category="info" style="--tx-post-bg:#fffdfa;--tx-post-text:#1e3e3f;--tx-cat-bg:#eef2f7;--tx-cat-text:#4f6370">
+    <a href="/about/">
+        <h2 class="post-title">About Me</h2>
+    </a>
+    <div class="category-and-date">
+        
+        
+        <span class="category">
+            <a href="/categories/info/" style="color:#4f6370">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                info
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/4/10
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>关于这个博客的个人信息</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+             <a href="/tags/info/" style="color:#4f6370">info</a>
+        </span>
+        
+    </div>
+    <a href="/about/" class="go-post" style="background:#eef2f7;color:#4f6370">Read More...</a>
+</div>
+
+
+        <div class="page-current">
+    
+    <span class="current">1</span>
+    
+    
+    
+    
+</div>
+
+    </div>
+    
+    <div id="home-card">
+        <div id="card-style">
+    <div id="card-div">
+        <div class="avatar">
+            <img src="/images/avatar.jpg" alt="avatar" />
+        </div>
+        <div class="name">AL0nE1y</div>
+        <div class="description">
+            <p>A Lonely Blog</p>
+
+        </div>
+        
+        
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a href="http://AL0nE1y.github.io">Blog</a>
+            </div>
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://space.bilibili.com/2018543">Bilibili</a>
+            </div>
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://steamcommunity.com/id/AL0nE1y">Steam</a>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+    </div>
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy; 2026 Made by
+            <a target="_blank" rel="noopener" href="https://github.com/dinhkarate">dinhkarate</a>
+            from <a target="_blank" rel="noopener" href="https://thatnghiep.dev">thatnghiep.dev</a>
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> |
+            <a target="_blank" rel="noopener" href="https://github.com/thatnghiep-dev/hexo-theme-loststar">LostStar Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+</body>
+</html>
