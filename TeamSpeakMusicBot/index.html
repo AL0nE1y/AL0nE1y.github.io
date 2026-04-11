@@ -3,21 +3,21 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>TeamSpeakMusicBot | A Lonely Blog</title>
+    <title>设置TeamSpeakMusicBot作为音乐机器人 | A Lonely Blog</title>
     <meta name="author" content="AL0nE1y" />
 
     <meta name="keywords" content="TeamSpeak,Bot,音乐机器人" />
     <link rel="canonical" href="http://al0ne1y.github.io/TeamSpeakMusicBot/" />
     <meta name="description" content="之前买的TS服务器最近也是开始用了，重新研究了一下音乐机器人🤓👆">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TeamSpeakMusicBot">
+<meta property="og:title" content="设置TeamSpeakMusicBot作为音乐机器人">
 <meta property="og:url" content="http://al0ne1y.github.io/TeamSpeakMusicBot/index.html">
 <meta property="og:site_name" content="A Lonely Blog">
 <meta property="og:description" content="之前买的TS服务器最近也是开始用了，重新研究了一下音乐机器人🤓👆">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://al0ne1y.github.io/images/avatar.jpg">
-<meta property="article:published_time" content="2026-04-11T07:57:35.000Z">
-<meta property="article:modified_time" content="2026-04-11T07:58:46.301Z">
+<meta property="article:published_time" content="2026-04-11T08:27:35.000Z">
+<meta property="article:modified_time" content="2026-04-11T08:37:14.588Z">
 <meta property="article:author" content="AL0nE1y">
 <meta property="article:tag" content="TeamSpeak">
 <meta property="article:tag" content="Bot">
@@ -175,9 +175,9 @@
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             
-<div class="article" data-category="笔记" style="--tx-post-bg:#fffdfa;--tx-post-text:#1e3e3f;--tx-cat-bg:#eef2f7;--tx-cat-text:#4f6370">
+<div class="article" >
     <div>
-        <h1>TeamSpeakMusicBot</h1>
+        <h1>设置TeamSpeakMusicBot作为音乐机器人</h1>
     </div>
     <div class="info">
         <span class="date">
@@ -189,7 +189,7 @@
         
         
         <span class="category">
-            <a href="/categories/%E7%AC%94%E8%AE%B0/" style="color:#4f6370">
+            <a href="/categories/%E7%AC%94%E8%AE%B0/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
@@ -205,21 +205,21 @@
             
             
             <span class="tag">
-                <a href="/tags/TeamSpeak/" style="color:#4f6370">
+                <a href="/tags/TeamSpeak/">
                     TeamSpeak
                 </a>
             </span>
             
             
             <span class="tag">
-                <a href="/tags/Bot/" style="color:#4f6370">
+                <a href="/tags/Bot/">
                     Bot
                 </a>
             </span>
             
             
             <span class="tag">
-                <a href="/tags/%E9%9F%B3%E4%B9%90%E6%9C%BA%E5%99%A8%E4%BA%BA/" style="color:#4f6370">
+                <a href="/tags/%E9%9F%B3%E4%B9%90%E6%9C%BA%E5%99%A8%E4%BA%BA/">
                     音乐机器人
                 </a>
             </span>
@@ -232,7 +232,20 @@
         <p>之前买的TS服务器最近也是开始用了，重新研究了一下音乐机器人🤓👆</p>
 <span id="more"></span>
 
-
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>之前用的是<a href="TS3AudioBot">TS3AudioBot</a>加上<a target="_blank" rel="noopener" href="https://github.com/ZHANGTIANYAO1/TS3AudioBot-NetEaseCloudmusic-plugin">网易云插件</a></p>
+<p>然后弄的时候发现都已经停止维护了，插件的开发者已经新开了<a target="_blank" rel="noopener" href="https://github.com/ZHANGTIANYAO1/teamspeak-music-bot">音乐机器人项目</a></p>
+<p>在此首先非常感谢这个项目😊</p>
+<p>部署的时候要注意node版本，最后nvm选用了20.19.0</p>
+<p>部署完成后打开webui完成配置即可，目录下config.json可以设置默认端口防止占用以及设置短命令</p>
+<pre><code>&quot;commandPrefix&quot;: &quot;!&quot;,
+  &quot;commandAliases&quot;: &#123;
+    &quot;p&quot;: &quot;play&quot;,
+    &quot;pl&quot;: &quot;playlist&quot;,
+    &quot;a&quot;: &quot;add&quot;,
+    &quot;s&quot;: &quot;skip&quot;,
+    &quot;v&quot;: &quot;vol&quot;
+  &#125;,
+</code></pre>
 
     </div>
     
